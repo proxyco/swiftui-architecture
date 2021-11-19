@@ -35,6 +35,7 @@ struct RootView: View {
                         Text(RootViewModel.Tab.home.navTitle)
                     }
                     .tag(RootViewModel.Tab.home)
+                    .navigationBarTitle(viewModel.selectedTab.navTitle)
 
                 PendingTasksView()
                     .tabItem {
@@ -42,8 +43,8 @@ struct RootView: View {
                         Text(RootViewModel.Tab.tasks.navTitle)
                     }
                     .tag(RootViewModel.Tab.tasks)
+                    .navigationBarTitle(viewModel.selectedTab.navTitle)
             }
-            .navigationBarTitle(viewModel.selectedTab.navTitle)
         }
     }
 }
