@@ -13,7 +13,8 @@ final class HomeViewModel: ObservableObject {
 
     let viewBuilder: NavigationBuilder = NavigationBuilder()
 
-    func route(for repository: Repository) -> RepositoryView {
+    @ViewBuilder
+    func route(for repository: Repository) -> some View {
         viewBuilder.viewForRoute(.repository(repository))
     }
 }
