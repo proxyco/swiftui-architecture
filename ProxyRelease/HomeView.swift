@@ -10,6 +10,12 @@ import SwiftUI
 
 final class HomeViewModel: ObservableObject {
     var repositories: [Repository] = Repository.allCases
+
+    let viewBuilder: NavigationBuilder = NavigationBuilder()
+
+    func route(for repository: Repository) -> RepositoryView {
+        viewBuilder.viewForRoute(.repository(repository))
+    }
 }
 
 struct HomeView: View {
@@ -17,7 +23,7 @@ struct HomeView: View {
 
     var body: some View {
         List(viewModel.repositories) { repo in
-            NavigationLink(destination: RepositoryView(viewModel: RepositoryViewModel(repository: repo))) {
+            NavigationLink(destination: viewModel.route(for: repo)) {
                 RepositoryItemView(repository: repo)
             }
             .listRowInsets(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
