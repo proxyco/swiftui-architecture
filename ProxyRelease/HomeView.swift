@@ -9,7 +9,15 @@ import Foundation
 import SwiftUI
 
 final class HomeViewModel: ObservableObject {
+
+    let sampleService: SampleServiceProtocol
     var repositories: [Repository] = Repository.allCases
+
+    init(
+        sampleService: SampleServiceProtocol = DI.sampleService
+    ) {
+        self.sampleService = sampleService
+    }
 }
 
 struct HomeView: View {
@@ -17,7 +25,8 @@ struct HomeView: View {
 
     var body: some View {
         List(viewModel.repositories) { repo in
-            NavigationLink(destination: RepositoryView(viewModel: RepositoryViewModel(repository: repo))) {
+            NavigationLink(
+                destination: RepositoryView(viewModel: RepositoryViewModel(repository: repo))) {
                 RepositoryItemView(repository: repo)
             }
             .listRowInsets(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
