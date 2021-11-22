@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SwiftUIKitView",
+        "repositoryURL": "https://github.com/AvdLee/SwiftUIKitView",
+        "state": {
+          "branch": null,
+          "revision": "296bf2ccb97efed44dea76622f4a10359ce22f6a",
+          "version": "1.0.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -7,11 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5248C4ED27479BAE007203DB /* ProxyReleaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5248C4EC27479BAE007203DB /* ProxyReleaseApp.swift */; };
 		5248C4EF27479BAE007203DB /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5248C4EE27479BAE007203DB /* RootView.swift */; };
 		5248C4F127479BB0007203DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5248C4F027479BB0007203DB /* Assets.xcassets */; };
 		5248C4F427479BB0007203DB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5248C4F327479BB0007203DB /* Preview Assets.xcassets */; };
 		5248C4FE27479BB1007203DB /* ProxyReleaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5248C4FD27479BB1007203DB /* ProxyReleaseTests.swift */; };
-		52B256F62747AF0400F3EC1B /* ProxyReleaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B256F52747AF0400F3EC1B /* ProxyReleaseApp.swift */; };
+		5248C51727479EE0007203DB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5248C51627479EE0007203DB /* HomeView.swift */; };
+		5248C51927479F49007203DB /* PendingTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5248C51827479F49007203DB /* PendingTasksView.swift */; };
+		5248C51D2747A183007203DB /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5248C51C2747A183007203DB /* Repository.swift */; };
+		5248C5202747A278007203DB /* SwiftUIKitView in Frameworks */ = {isa = PBXBuildFile; productRef = 5248C51F2747A278007203DB /* SwiftUIKitView */; };
+		528D97782747B34400C6E2A2 /* SingleLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D97772747B34400C6E2A2 /* SingleLineView.swift */; };
+		52B256F22747A3E700F3EC1B /* RepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B256F12747A3E700F3EC1B /* RepositoryView.swift */; };
+		52B256F42747A4BD00F3EC1B /* Build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B256F32747A4BD00F3EC1B /* Build.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,12 +33,18 @@
 
 /* Begin PBXFileReference section */
 		5248C4E927479BAE007203DB /* ProxyRelease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProxyRelease.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5248C4EC27479BAE007203DB /* ProxyReleaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyReleaseApp.swift; sourceTree = "<group>"; };
 		5248C4EE27479BAE007203DB /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		5248C4F027479BB0007203DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5248C4F327479BB0007203DB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5248C4F927479BB1007203DB /* ProxyReleaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProxyReleaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5248C4FD27479BB1007203DB /* ProxyReleaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyReleaseTests.swift; sourceTree = "<group>"; };
-		52B256F52747AF0400F3EC1B /* ProxyReleaseApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProxyReleaseApp.swift; sourceTree = "<group>"; };
+		5248C51627479EE0007203DB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5248C51827479F49007203DB /* PendingTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingTasksView.swift; sourceTree = "<group>"; };
+		5248C51C2747A183007203DB /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		528D97772747B34400C6E2A2 /* SingleLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLineView.swift; sourceTree = "<group>"; };
+		52B256F12747A3E700F3EC1B /* RepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryView.swift; sourceTree = "<group>"; };
+		52B256F32747A4BD00F3EC1B /* Build.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Build.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5248C5202747A278007203DB /* SwiftUIKitView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +87,12 @@
 		5248C4EB27479BAE007203DB /* ProxyRelease */ = {
 			isa = PBXGroup;
 			children = (
-				52B256F52747AF0400F3EC1B /* ProxyReleaseApp.swift */,
+				528D97762747B32900C6E2A2 /* Views */,
+				5248C51B2747A17B007203DB /* Model */,
+				5248C4EC27479BAE007203DB /* ProxyReleaseApp.swift */,
+				5248C51627479EE0007203DB /* HomeView.swift */,
+				52B256F12747A3E700F3EC1B /* RepositoryView.swift */,
+				5248C51827479F49007203DB /* PendingTasksView.swift */,
 				5248C4EE27479BAE007203DB /* RootView.swift */,
 				5248C4F027479BB0007203DB /* Assets.xcassets */,
 				5248C4F227479BB0007203DB /* Preview Content */,
@@ -97,6 +116,23 @@
 			path = ProxyReleaseTests;
 			sourceTree = "<group>";
 		};
+		5248C51B2747A17B007203DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5248C51C2747A183007203DB /* Repository.swift */,
+				52B256F32747A4BD00F3EC1B /* Build.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		528D97762747B32900C6E2A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				528D97772747B34400C6E2A2 /* SingleLineView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,6 +150,7 @@
 			);
 			name = ProxyRelease;
 			packageProductDependencies = (
+				5248C51F2747A278007203DB /* SwiftUIKitView */,
 			);
 			productName = ProxyRelease;
 			productReference = 5248C4E927479BAE007203DB /* ProxyRelease.app */;
@@ -166,6 +203,7 @@
 			);
 			mainGroup = 5248C4E027479BAD007203DB;
 			packageReferences = (
+				5248C51E2747A278007203DB /* XCRemoteSwiftPackageReference "SwiftUIKitView" */,
 			);
 			productRefGroup = 5248C4EA27479BAE007203DB /* Products */;
 			projectDirPath = "";
@@ -201,8 +239,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52B256F62747AF0400F3EC1B /* ProxyReleaseApp.swift in Sources */,
+				5248C51727479EE0007203DB /* HomeView.swift in Sources */,
+				5248C51D2747A183007203DB /* Repository.swift in Sources */,
+				52B256F22747A3E700F3EC1B /* RepositoryView.swift in Sources */,
 				5248C4EF27479BAE007203DB /* RootView.swift in Sources */,
+				528D97782747B34400C6E2A2 /* SingleLineView.swift in Sources */,
+				5248C51927479F49007203DB /* PendingTasksView.swift in Sources */,
+				52B256F42747A4BD00F3EC1B /* Build.swift in Sources */,
+				5248C4ED27479BAE007203DB /* ProxyReleaseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +524,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5248C51E2747A278007203DB /* XCRemoteSwiftPackageReference "SwiftUIKitView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AvdLee/SwiftUIKitView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5248C51F2747A278007203DB /* SwiftUIKitView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5248C51E2747A278007203DB /* XCRemoteSwiftPackageReference "SwiftUIKitView" */;
+			productName = SwiftUIKitView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5248C4E127479BAE007203DB /* Project object */;
 }
