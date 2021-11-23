@@ -9,14 +9,20 @@ import Foundation
 import SwiftUI
 
 final class HomeViewModel: ObservableObject {
+    typealias Dependencies = SampleServiceProvider & UserServiceProvider
 
     let sampleService: SampleServiceProtocol
+    let userService: UserServiceProtocol
+
     var repositories: [Repository] = Repository.allCases
 
-    init(
-        sampleService: SampleServiceProtocol = DI.sampleService
-    ) {
-        self.sampleService = sampleService
+    init(dependencies: Dependencies = DI) {
+        sampleService = dependencies.sampleService
+        userService = dependencies.userService
+    }
+
+    var userName: String {
+        userService.name
     }
 }
 

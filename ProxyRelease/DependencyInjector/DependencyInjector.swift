@@ -7,11 +7,17 @@
 
 import Foundation
 
-protocol DependencyInjectorProtocol {
+var DI: DependencyInjectorProtocol = DependencyInjector.shared
+
+typealias DependencyInjectorProtocol = SampleServiceProvider & UserServiceProvider
+
+protocol SampleServiceProvider {
     var sampleService: SampleServiceProtocol { get }
 }
 
-var DI: DependencyInjectorProtocol = DependencyInjector.shared
+protocol UserServiceProvider {
+    var userService: UserServiceProtocol { get }
+}
 
 final class DependencyInjector: DependencyInjectorProtocol {
 
@@ -20,5 +26,9 @@ final class DependencyInjector: DependencyInjectorProtocol {
 
     var sampleService: SampleServiceProtocol {
         userContainer.instance(for: SampleServiceProtocol.self) { SampleService() }
+    }
+
+    var userService: UserServiceProtocol {
+        userContainer.instance(for: UserServiceProtocol.self) { UserService() }
     }
 }

@@ -19,3 +19,10 @@ final class SampleService: SampleServiceProtocol {
         }
     }
 }
+
+final class SampleServiceMock: SampleServiceProtocol {
+
+    func doSomething(action: @escaping () -> Void) {
+
+    }
+}
