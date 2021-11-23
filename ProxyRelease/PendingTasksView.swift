@@ -14,10 +14,11 @@ struct PendingTasksView: View {
             Section("Exploration") {
                 SingleLineView(title: "Navigation")
                 SingleLineView(title: "Dependency Injection")
-                SingleLineView(title: "Mix SwiftUI & UIKit")
-                SingleLineView(title: "UIKit embebed")
+                NavigationLink(destination: EmbeddingUIKitView(viewModel: EmbeddingUIKitViewModel())) {
+                    SingleLineView(title: "UIKit View Controller Embedded")
+                }
             }
-            
+
             Section("App tasks") {
                 SingleLineView(title: "Trigger builds")
                 SingleLineView(title: "App Icon")

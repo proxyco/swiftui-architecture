@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17772D7B274CF51E0034D7CF /* FallbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17772D7A274CF51E0034D7CF /* FallbackViewController.swift */; };
+		17772D7D274CF5E70034D7CF /* FallbackViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17772D7C274CF5E70034D7CF /* FallbackViewControllerWrapper.swift */; };
+		17772D7F274CF6450034D7CF /* EmbeddingUIKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17772D7E274CF6450034D7CF /* EmbeddingUIKitView.swift */; };
 		5248C4ED27479BAE007203DB /* ProxyReleaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5248C4EC27479BAE007203DB /* ProxyReleaseApp.swift */; };
 		5248C4EF27479BAE007203DB /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5248C4EE27479BAE007203DB /* RootView.swift */; };
 		5248C4F127479BB0007203DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5248C4F027479BB0007203DB /* Assets.xcassets */; };
@@ -32,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17772D7A274CF51E0034D7CF /* FallbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FallbackViewController.swift; sourceTree = "<group>"; };
+		17772D7C274CF5E70034D7CF /* FallbackViewControllerWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FallbackViewControllerWrapper.swift; sourceTree = "<group>"; };
+		17772D7E274CF6450034D7CF /* EmbeddingUIKitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmbeddingUIKitView.swift; sourceTree = "<group>"; };
 		5248C4E927479BAE007203DB /* ProxyRelease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProxyRelease.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5248C4EC27479BAE007203DB /* ProxyReleaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyReleaseApp.swift; sourceTree = "<group>"; };
 		5248C4EE27479BAE007203DB /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -66,6 +72,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17772D79274CF51E0034D7CF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				17772D7A274CF51E0034D7CF /* FallbackViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		5248C4E027479BAD007203DB = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +101,7 @@
 		5248C4EB27479BAE007203DB /* ProxyRelease */ = {
 			isa = PBXGroup;
 			children = (
+				17772D79274CF51E0034D7CF /* ViewControllers */,
 				528D97762747B32900C6E2A2 /* Views */,
 				5248C51B2747A17B007203DB /* Model */,
 				5248C4EC27479BAE007203DB /* ProxyReleaseApp.swift */,
@@ -94,6 +109,7 @@
 				52B256F12747A3E700F3EC1B /* RepositoryView.swift */,
 				5248C51827479F49007203DB /* PendingTasksView.swift */,
 				5248C4EE27479BAE007203DB /* RootView.swift */,
+				17772D7E274CF6450034D7CF /* EmbeddingUIKitView.swift */,
 				5248C4F027479BB0007203DB /* Assets.xcassets */,
 				5248C4F227479BB0007203DB /* Preview Content */,
 			);
@@ -128,6 +144,7 @@
 		528D97762747B32900C6E2A2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				17772D7C274CF5E70034D7CF /* FallbackViewControllerWrapper.swift */,
 				528D97772747B34400C6E2A2 /* SingleLineView.swift */,
 			);
 			path = Views;
@@ -239,10 +256,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17772D7D274CF5E70034D7CF /* FallbackViewControllerWrapper.swift in Sources */,
 				5248C51727479EE0007203DB /* HomeView.swift in Sources */,
 				5248C51D2747A183007203DB /* Repository.swift in Sources */,
 				52B256F22747A3E700F3EC1B /* RepositoryView.swift in Sources */,
 				5248C4EF27479BAE007203DB /* RootView.swift in Sources */,
+				17772D7B274CF51E0034D7CF /* FallbackViewController.swift in Sources */,
+				17772D7F274CF6450034D7CF /* EmbeddingUIKitView.swift in Sources */,
 				528D97782747B34400C6E2A2 /* SingleLineView.swift in Sources */,
 				5248C51927479F49007203DB /* PendingTasksView.swift in Sources */,
 				52B256F42747A4BD00F3EC1B /* Build.swift in Sources */,
