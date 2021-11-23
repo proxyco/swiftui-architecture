@@ -45,6 +45,7 @@
 		528D97772747B34400C6E2A2 /* SingleLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLineView.swift; sourceTree = "<group>"; };
 		52B256F12747A3E700F3EC1B /* RepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryView.swift; sourceTree = "<group>"; };
 		52B256F32747A4BD00F3EC1B /* Build.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Build.swift; sourceTree = "<group>"; };
+		E043645C274BDA56005717B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +88,7 @@
 		5248C4EB27479BAE007203DB /* ProxyRelease */ = {
 			isa = PBXGroup;
 			children = (
+				E043645C274BDA56005717B0 /* Info.plist */,
 				528D97762747B32900C6E2A2 /* Views */,
 				5248C51B2747A17B007203DB /* Model */,
 				5248C4EC27479BAE007203DB /* ProxyReleaseApp.swift */,
@@ -396,6 +398,7 @@
 				DEVELOPMENT_TEAM = AU9ZDUDBTM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProxyRelease/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -425,6 +428,7 @@
 				DEVELOPMENT_TEAM = AU9ZDUDBTM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProxyRelease/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
