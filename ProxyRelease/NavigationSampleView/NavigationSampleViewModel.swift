@@ -12,6 +12,8 @@ import Combine
 
 enum Route {
     case editUser(_ user: User?)
+    case counter(counter: Int)
+    case sample(counter: Int)
 }
 
 final class NavigationSampleViewModel: ObservableObject {
