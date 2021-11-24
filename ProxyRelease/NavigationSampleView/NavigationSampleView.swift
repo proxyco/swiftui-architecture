@@ -32,12 +32,30 @@ struct NavigationSampleView: View {
                     self.viewModel.editUser()
                 },
                 label: {
-                    Text("Edit User")
+                    Text("Edit User with no Binding")
                         .frame(maxWidth: .infinity, minHeight: 50, maxHeight: 50)
                         .background(.blue)
                         .foregroundColor(.white)
                 }
-            ).frame(maxWidth: .infinity, minHeight: 50, maxHeight: 50)
+            )
+
+            NavigationLink(
+                unwrapping: $viewModel.route,
+                case: /Route.editUser,
+                destination: { $user in
+                    EditorView(viewModel: EditorViewModel(user: $user))
+                },
+                onNavigate: {
+                    guard $0 else { return }
+                    self.viewModel.editUser()
+                },
+                label: {
+                    Text("Edit User with Binding")
+                        .frame(maxWidth: .infinity, minHeight: 50, maxHeight: 50)
+                        .background(.green)
+                        .foregroundColor(.white)
+                }
+            )
         }
     }
 }

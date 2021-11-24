@@ -13,18 +13,36 @@ final class EditorViewModel: ObservableObject {
     @Published var firstName: String
     @Published var lastName: String
 
-    @Published var user: User
+    @Published var user: User? = nil
+
+    @Binding var bindableUser: User?
 
     init(user: User) {
         _user = Published(initialValue: user)
+
+        _bindableUser = Binding.constant(nil)
 
         firstName = user.firstName
         lastName = user.lastName
     }
 
+    init(user: Binding<User?>) {
+        _bindableUser = user
+        _user = Published(initialValue: nil)
+
+        firstName = user.wrappedValue?.firstName ?? ""
+        lastName = user.wrappedValue?.lastName ?? ""
+    }
+
     func save() {
-        user.firstName = firstName
-        user.lastName = lastName
+        user?.firstName = firstName
+        user?.lastName = lastName
+
+        bindableUser?.firstName = firstName
+        bindableUser?.lastName = lastName
+
+        // not firing bindable
+        bindableUser = bindableUser
     }
 }
 
