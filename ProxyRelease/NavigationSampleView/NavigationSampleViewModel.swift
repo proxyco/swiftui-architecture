@@ -7,18 +7,20 @@
 
 import Foundation
 import SwiftUINavigation
+import SwiftUI
 
 enum Route {
-    case openViewA
+    case editUser(_ user: User?)
     case openViewB
 }
 
 final class NavigationSampleViewModel: ObservableObject {
 
     @Published var route: Route?
+    @Published var user: User = User(firstName: "", lastName: "")
 
-    func openViewA() {
-        route = .openViewA
+    func editUser() {
+        route = .editUser(user)
     }
 
     func openViewB() {

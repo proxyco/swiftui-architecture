@@ -13,42 +13,31 @@ struct NavigationSampleView: View {
 
     var body: some View {
 
-        VStack(spacing: 10) {
-            Button {
-                viewModel.openViewA()
-            } label: {
-                Text("Push")
-                    .frame(maxWidth: .infinity, minHeight: 50)
-                    .background(.blue)
-                    .foregroundColor(.white)
-            }
+        VStack(alignment: .leading, spacing: 10) {
+            Group {
+                Text("First: \(viewModel.user.firstName)")
+                Text("Last: \(viewModel.user.lastName)")
+            }.padding([.top, .leading, .trailing], 20)
 
-            Button {
-                viewModel.openViewB()
-            } label: {
-                Text("Second")
-                    .frame(maxWidth: .infinity, minHeight: 50)
-                    .background(.red)
-                    .foregroundColor(.white)
-            }
-            Button {
-                print("Alert")
-            } label: {
-                Text("Third")
-                    .frame(maxWidth: .infinity, minHeight: 50)
-                    .background(.green)
-                    .foregroundColor(.white)
-            }
-
+            Spacer()
+            
             NavigationLink(
                 unwrapping: $viewModel.route,
-                case: /Route.openViewA,
-                destination: { _ in ViewA() },
-                onNavigate: { _ in },
-                label: { EmptyView() }
-            ).sheet(unwrapping: $viewModel.route, case: /Route.openViewB) { _ in
-                ViewB()
-            }
+                case: /Route.editUser,
+                destination: { $user in
+                    EditorView(viewModel: EditorViewModel(user: $user.wrappedValue))
+                },
+                onNavigate: {
+                    guard $0 else { return }
+                    self.viewModel.editUser()
+                },
+                label: {
+                    Text("Edit User")
+                        .frame(maxWidth: .infinity, minHeight: 50, maxHeight: 50)
+                        .background(.blue)
+                        .foregroundColor(.white)
+                }
+            ).frame(maxWidth: .infinity, minHeight: 50, maxHeight: 50)
         }
     }
 }
