@@ -19,6 +19,16 @@ final class NavigationSampleViewModel: ObservableObject {
     @Published var route: Route?
     @Published var user: User = User(firstName: "", lastName: "")
 
+//    lazy var userBinding = Binding(
+//        get: {
+//            self.user
+//        },
+//        set: {
+//            self.user = $0
+//        }
+//    )
+
+
     private var cancellables = Set<AnyCancellable>()
 
     init() {

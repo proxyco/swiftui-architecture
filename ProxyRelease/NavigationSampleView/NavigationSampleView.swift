@@ -19,31 +19,16 @@ struct NavigationSampleView: View {
                 Text("Last: \(viewModel.user.lastName)")
             }.padding([.top, .leading, .trailing], 20)
 
+
             Spacer()
-            
-            NavigationLink(
-                unwrapping: $viewModel.route,
-                case: /Route.editUser,
-                destination: { $user in
-                    EditorView(viewModel: EditorViewModel(user: $user.wrappedValue))
-                },
-                onNavigate: {
-                    guard $0 else { return }
-                    self.viewModel.editUser()
-                },
-                label: {
-                    Text("Edit User with no Binding")
-                        .frame(maxWidth: .infinity, minHeight: 50, maxHeight: 50)
-                        .background(.blue)
-                        .foregroundColor(.white)
-                }
-            )
 
             NavigationLink(
                 unwrapping: $viewModel.route,
                 case: /Route.editUser,
                 destination: { $user in
-                    EditorView(viewModel: EditorViewModel(user: $user))
+                    EditorView(viewModel: EditorViewModel(user: $user, onSave: {
+                        self.viewModel.user = user
+                    }))
                 },
                 onNavigate: {
                     guard $0 else { return }

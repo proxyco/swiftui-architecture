@@ -28,6 +28,11 @@ final class RootViewModel: ObservableObject {
 struct RootView: View {
     @ObservedObject var viewModel: RootViewModel
 
+    init(viewModel: RootViewModel) {
+        self.viewModel = viewModel
+        UITabBar.appearance().backgroundColor = UIColor.white
+    }
+
     var body: some View {
         NavigationView {
             TabView(selection: $viewModel.selectedTab) {
