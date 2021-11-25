@@ -45,7 +45,7 @@ struct RootView: View {
                     }
                     .tag(RootViewModel.Tab.tasks)
 
-                NavigationSampleView(viewModel: NavigationSampleViewModel())
+                NavigationSampleView()
                     .tabItem {
                         Image(systemName: "flame")
                         Text(RootViewModel.Tab.tasks.navTitle)
