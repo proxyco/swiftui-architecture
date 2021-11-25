@@ -10,12 +10,13 @@ import SwiftUI
 final class RootViewModel: ObservableObject {
     enum Tab: String, Identifiable {
         var id: String { rawValue }
-        case home, tasks
+        case home, tasks, navigation
 
         var navTitle: String {
             switch self {
                 case .home: return "Repositories"
                 case .tasks: return "Tasks"
+                case .navigation: return "Navigation"
             }
         }
     }
@@ -43,6 +44,13 @@ struct RootView: View {
                         Text(RootViewModel.Tab.tasks.navTitle)
                     }
                     .tag(RootViewModel.Tab.tasks)
+
+                NavigationSampleView()
+                    .tabItem {
+                        Image(systemName: "flame")
+                        Text(RootViewModel.Tab.tasks.navTitle)
+                    }
+                    .tag(RootViewModel.Tab.navigation)
             }.navigationBarTitle(viewModel.selectedTab.navTitle)
 
         }.onOpenURL { url in
