@@ -14,7 +14,6 @@
 		5248C4EF27479BAE007203DB /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5248C4EE27479BAE007203DB /* RootView.swift */; };
 		5248C4F127479BB0007203DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5248C4F027479BB0007203DB /* Assets.xcassets */; };
 		5248C4F427479BB0007203DB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5248C4F327479BB0007203DB /* Preview Assets.xcassets */; };
-		5248C4FE27479BB1007203DB /* ProxyReleaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5248C4FD27479BB1007203DB /* ProxyReleaseTests.swift */; };
 		5248C51727479EE0007203DB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5248C51627479EE0007203DB /* HomeView.swift */; };
 		5248C51927479F49007203DB /* PendingTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5248C51827479F49007203DB /* PendingTasksView.swift */; };
 		5248C51D2747A183007203DB /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5248C51C2747A183007203DB /* Repository.swift */; };
@@ -22,6 +21,14 @@
 		528D97782747B34400C6E2A2 /* SingleLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528D97772747B34400C6E2A2 /* SingleLineView.swift */; };
 		52B256F22747A3E700F3EC1B /* RepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B256F12747A3E700F3EC1B /* RepositoryView.swift */; };
 		52B256F42747A4BD00F3EC1B /* Build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B256F32747A4BD00F3EC1B /* Build.swift */; };
+		E03517FB274D271300C82262 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03517FA274D271300C82262 /* UserService.swift */; };
+		E0351804274D28D500C82262 /* HomeViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0351803274D28D500C82262 /* HomeViewModelSpec.swift */; };
+		E0351807274D296000C82262 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = E0351806274D296000C82262 /* Quick */; };
+		E035180A274D296E00C82262 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = E0351809274D296E00C82262 /* Nimble */; };
+		E035180C274D29D800C82262 /* DependencyInjectorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E035180B274D29D800C82262 /* DependencyInjectorMock.swift */; };
+		E0436469274C0E19005717B0 /* SampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0436468274C0E19005717B0 /* SampleService.swift */; };
+		E043646D274C0E3E005717B0 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E043646B274C0E3E005717B0 /* DependencyContainer.swift */; };
+		E043646E274C0E3E005717B0 /* DependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E043646C274C0E3E005717B0 /* DependencyInjector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,13 +51,19 @@
 		5248C4F027479BB0007203DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5248C4F327479BB0007203DB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5248C4F927479BB1007203DB /* ProxyReleaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProxyReleaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5248C4FD27479BB1007203DB /* ProxyReleaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyReleaseTests.swift; sourceTree = "<group>"; };
 		5248C51627479EE0007203DB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5248C51827479F49007203DB /* PendingTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingTasksView.swift; sourceTree = "<group>"; };
 		5248C51C2747A183007203DB /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		528D97772747B34400C6E2A2 /* SingleLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLineView.swift; sourceTree = "<group>"; };
 		52B256F12747A3E700F3EC1B /* RepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryView.swift; sourceTree = "<group>"; };
 		52B256F32747A4BD00F3EC1B /* Build.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Build.swift; sourceTree = "<group>"; };
+		E03517FA274D271300C82262 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		E0351803274D28D500C82262 /* HomeViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelSpec.swift; sourceTree = "<group>"; };
+		E035180B274D29D800C82262 /* DependencyInjectorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectorMock.swift; sourceTree = "<group>"; };
+		E043645C274BDA56005717B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E0436468274C0E19005717B0 /* SampleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleService.swift; sourceTree = "<group>"; };
+		E043646B274C0E3E005717B0 /* DependencyContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		E043646C274C0E3E005717B0 /* DependencyInjector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyInjector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0351807274D296000C82262 /* Quick in Frameworks */,
+				E035180A274D296E00C82262 /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +117,9 @@
 			isa = PBXGroup;
 			children = (
 				17772D79274CF51E0034D7CF /* ViewControllers */,
+				E043645C274BDA56005717B0 /* Info.plist */,
+				E043646A274C0E32005717B0 /* DependencyInjector */,
+				E0436467274C0E04005717B0 /* Services */,
 				528D97762747B32900C6E2A2 /* Views */,
 				5248C51B2747A17B007203DB /* Model */,
 				5248C4EC27479BAE007203DB /* ProxyReleaseApp.swift */,
@@ -127,7 +145,7 @@
 		5248C4FC27479BB1007203DB /* ProxyReleaseTests */ = {
 			isa = PBXGroup;
 			children = (
-				5248C4FD27479BB1007203DB /* ProxyReleaseTests.swift */,
+				E0351803274D28D500C82262 /* HomeViewModelSpec.swift */,
 			);
 			path = ProxyReleaseTests;
 			sourceTree = "<group>";
@@ -148,6 +166,25 @@
 				528D97772747B34400C6E2A2 /* SingleLineView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E0436467274C0E04005717B0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E0436468274C0E19005717B0 /* SampleService.swift */,
+				E03517FA274D271300C82262 /* UserService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E043646A274C0E32005717B0 /* DependencyInjector */ = {
+			isa = PBXGroup;
+			children = (
+				E043646B274C0E3E005717B0 /* DependencyContainer.swift */,
+				E043646C274C0E3E005717B0 /* DependencyInjector.swift */,
+				E035180B274D29D800C82262 /* DependencyInjectorMock.swift */,
+			);
+			path = DependencyInjector;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +224,10 @@
 				5248C4FB27479BB1007203DB /* PBXTargetDependency */,
 			);
 			name = ProxyReleaseTests;
+			packageProductDependencies = (
+				E0351806274D296000C82262 /* Quick */,
+				E0351809274D296E00C82262 /* Nimble */,
+			);
 			productName = ProxyReleaseTests;
 			productReference = 5248C4F927479BB1007203DB /* ProxyReleaseTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -206,6 +247,7 @@
 					};
 					5248C4F827479BB1007203DB = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 						TestTargetID = 5248C4E827479BAE007203DB;
 					};
 				};
@@ -221,6 +263,8 @@
 			mainGroup = 5248C4E027479BAD007203DB;
 			packageReferences = (
 				5248C51E2747A278007203DB /* XCRemoteSwiftPackageReference "SwiftUIKitView" */,
+				E0351805274D296000C82262 /* XCRemoteSwiftPackageReference "Quick" */,
+				E0351808274D296E00C82262 /* XCRemoteSwiftPackageReference "Nimble" */,
 			);
 			productRefGroup = 5248C4EA27479BAE007203DB /* Products */;
 			projectDirPath = "";
@@ -258,12 +302,17 @@
 			files = (
 				17772D7D274CF5E70034D7CF /* FallbackViewControllerWrapper.swift in Sources */,
 				5248C51727479EE0007203DB /* HomeView.swift in Sources */,
+				E0436469274C0E19005717B0 /* SampleService.swift in Sources */,
 				5248C51D2747A183007203DB /* Repository.swift in Sources */,
+				E043646E274C0E3E005717B0 /* DependencyInjector.swift in Sources */,
 				52B256F22747A3E700F3EC1B /* RepositoryView.swift in Sources */,
+				E035180C274D29D800C82262 /* DependencyInjectorMock.swift in Sources */,
 				5248C4EF27479BAE007203DB /* RootView.swift in Sources */,
 				17772D7B274CF51E0034D7CF /* FallbackViewController.swift in Sources */,
 				17772D7F274CF6450034D7CF /* EmbeddingUIKitView.swift in Sources */,
 				528D97782747B34400C6E2A2 /* SingleLineView.swift in Sources */,
+				E043646D274C0E3E005717B0 /* DependencyContainer.swift in Sources */,
+				E03517FB274D271300C82262 /* UserService.swift in Sources */,
 				5248C51927479F49007203DB /* PendingTasksView.swift in Sources */,
 				52B256F42747A4BD00F3EC1B /* Build.swift in Sources */,
 				5248C4ED27479BAE007203DB /* ProxyReleaseApp.swift in Sources */,
@@ -274,7 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5248C4FE27479BB1007203DB /* ProxyReleaseTests.swift in Sources */,
+				E0351804274D28D500C82262 /* HomeViewModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +465,7 @@
 				DEVELOPMENT_TEAM = AU9ZDUDBTM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProxyRelease/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -445,6 +495,7 @@
 				DEVELOPMENT_TEAM = AU9ZDUDBTM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProxyRelease/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -468,6 +519,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AU9ZDUDBTM;
@@ -493,6 +545,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AU9ZDUDBTM;
@@ -554,6 +607,22 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		E0351805274D296000C82262 /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		E0351808274D296E00C82262 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -561,6 +630,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5248C51E2747A278007203DB /* XCRemoteSwiftPackageReference "SwiftUIKitView" */;
 			productName = SwiftUIKitView;
+		};
+		E0351806274D296000C82262 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E0351805274D296000C82262 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		E0351809274D296E00C82262 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E0351808274D296E00C82262 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -21,6 +21,7 @@ final class RootViewModel: ObservableObject {
     }
 
     @Published var selectedTab: RootViewModel.Tab = .home
+    @Published var showModal: Bool = false
 }
 
 struct RootView: View {
@@ -42,8 +43,13 @@ struct RootView: View {
                         Text(RootViewModel.Tab.tasks.navTitle)
                     }
                     .tag(RootViewModel.Tab.tasks)
-            }
-            .navigationBarTitle(viewModel.selectedTab.navTitle)
+            }.navigationBarTitle(viewModel.selectedTab.navTitle)
+
+        }.onOpenURL { url in
+            print("Handled in RootView level: \(url)")
+            viewModel.showModal = true
+        }.sheet(isPresented: $viewModel.showModal) {
+            Text("Hi there")
         }
     }
 }
